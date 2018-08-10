@@ -1,0 +1,8 @@
+<!-- method 1 --> 
+<!-- <app-navbar (onRefresh)="dashboard.generateData()"></app-navbar>
+<app-dashboard #dashboard></app-dashboard> -->
+
+<!-- method 2-->
+<app-navbar (onRefresh)="refresh()"></app-navbar>
+<ng-template #alertBox></ng-template>
+<app-dashboard (onRefresh)="alert($event)"></app-dashboard>
